@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1 align = "center" style = "color: red;">EJERCICIO #3 <br></h1>
+    <h3 align = "left" style="color: #000;">Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter</h3>
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <script>
+        let texto = prompt ("Ingresa el texto a separar en cadenas");
+        let conversion= texto.split(" ")
+        console.log(conversion)
+        function recorrer(item) {
+            document.write(`${item}. `);
+        }
+        if (!texto) {
+            document.write(`Debe ingresar un texto`);
+        }
+        else {
+        conversion.forEach(recorrer);
+        }
+    </script>   
+</body>
+</html>
