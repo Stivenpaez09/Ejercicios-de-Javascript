@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercico 4</title>
+    <h1 align = "center" style = "color: red;">EJERCICIO #4 <br></h1>
+    <h3 align = "left" style="color: #000;">Programa una función que repita un texto X veces</h3>
+</head>
+<body>
+    <script>
+        let texto = prompt("ingresa un texto");
+        let veces = Number(prompt("ingrese la cantidad de veces que desea que se repita el texto"))
+        if (!texto || !veces){
+            document.write(`Ingrese un texto y un numero`)
+        }
+        else{
+            for (let index = 0; index <= veces; index++) {
+                document.write(`- ${texto}. <br>`);
+            }
+        }
+    </script>
+    
+</body>
+</html>
