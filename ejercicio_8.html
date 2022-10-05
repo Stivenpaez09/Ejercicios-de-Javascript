@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+    <h1 align = "center" style = "color: red;">EJERCICIO #7 <br></h1>
+    <h3 align = "left" style="color: #000;">Programa una función que elimine cierto patrón de caracteres de un texto dado.</h3>
+</head>
+<body>
+    <script>
+        let texto = prompt("Ingresa el texto a evaluar");
+        let patron = prompt("ingrese el paton a eliminar");
+        const eliminarPatron = (texto = "", patron = "")=>
+        (!texto || !patron)
+         ?document.write("Debe ingresar un texto y un patron")
+         : document.write(`El texto queda: ${texto.replace(new RegExp(patron, "ig"), "")}`);
+        eliminarPatron(texto, patron);
+    </script>
+</body>
+</html>
