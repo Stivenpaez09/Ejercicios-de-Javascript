@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devuelva el numerode caracteres que tiene esa cadena</title>
+</head>
+<body>
+    <h1 align = "center" style = "color: red;">EJERCICIO #1 <br></h1>
+    <h3 align = "left" style="color: #000;">Programa una función que cuente el número de caracteres de una cadena de texto</h3>
+    <script>
+        /* Como yo lo hago
+        let palabra = "";
+        let cont = 1;
+        palabra = prompt(`Ingrese una palabra`);
+
+        function contarLetras(palabra, cont) {
+
+            for (let index = 0; index <= palabra.length; index++){
+                cont++;
+            }
+            return (`la palabra ${palabra} tiene ${cont} caracteres`);
+        }
+        
+        if (Number(palabra) == palabra) {
+            document.write(`${palabra} no es una palabra`);
+
+        }
+        else if (String (palabra)== palabra){
+
+            document.write(contarLetras(palabra, cont));
+        }
+        */
+       //Como lo hacen en el curso
+        palabra = prompt(`Ingrese una palabra`);
+        const contarLetras = (palabra = "")=> 
+        (!palabra) 
+         ?document.write("no ingresaste ninguna cadena")
+         : document.write(`La cadena "${palabra}" tiene ${palabra.length} caracteres`);
+        
+        contarLetras(palabra);
+        
+    </script>
+</body>
+</html>
