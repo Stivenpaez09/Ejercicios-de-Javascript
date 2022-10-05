@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <h1 align = "center" style = "color: red;">EJERCICIO #2 <br></h1>
+    <h3 align = "left" style="color: #000;">Programa una función que te devuelva el texto recortado según el número de caracteres indicados</h3>
+    <script>
+        /* Como yo lo hago
+        let texto = prompt("Ingrese un texto");
+        let numero = prompt("ingrese el numero de caracteres que desea ver del texto ingresado con anterioridad");
+        numero = parseInt(numero);
+        let modificacion = "";
+        console.log(typeof numero);
+
+        function elegirTexto(texto, numero, modificacion){
+            modificacion = texto.slice(0, numero);
+
+            return modificacion;
+        
+        }
+
+        if (!texto || !numero) {
+
+            document.write(`Debe ingresar un texto en la cadena y elegir un numero`);
+             
+        }
+        else {
+            document.write(`La fraccion de texto que usted eligio es: `);
+            document.write(elegirTexto(texto, numero, modificacion));
+        }*/
+        //Como lo hacen en el curso
+        let texto = prompt("Ingrese un texto");
+        let numero = Number(prompt("ingrese el numero de caracteres que desea ver del texto ingresado con anterioridad"));
+        const elegirTexto = (texto = "", numero = undefined) =>
+         (!texto)
+          ?document.write("no ingresaste ninguna cadena")
+          :(numero === undefined)
+           ?document.write("no ingresaste la longitud para recortar la cadena")
+           :document.write(`La cadena que cortaste es: ${texto.slice(0,numero)}`); 
+        
+        elegirTexto(texto,numero);
+    </script>
+</body>
+</html>
