@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+    <h1 align = "center" style = "color: red;">EJERCICIO #6 <br></h1>
+    <h3 align = "left" style="color: #000;">Programa una función para contar el número de veces que se repite una palabra en un texto largo</h3>
+</head>
+<body>
+    <script>
+        /*Como lo hago
+        function principal (){
+            let texto = prompt("ingrese un texto aqui");
+            let encontrar = prompt("Ingrese la palabra que quiere verificar cuantas veces esta en el texto");
+            let cont = 0;
+            let cadena = texto.split(" ");
+            function sumar (item, index, cadena) {
+                if (item == encontrar) {
+                    cont++
+                }
+            }
+            cadena.forEach(sumar);
+            document.write(`la palabra ${encontrar} aparece ${cont} veces`); 
+        }
+        principal();*/
+
+        //Como lo hacen en el curso
+        let texto = prompt("ingrese un texto aqui");
+        let encontrar = prompt("Ingrese la palabra que quiere verificar cuantas veces esta en el texto");
+        const textoEnCadena = (texto = "", encontrar= "")=>{
+         if (!texto) return document.write("ingrese un texto");
+         if (!encontrar) return document.write("ingrese la palabra a evaluar");
+         let i=0, cont=0;
+         while (i !== -1) {
+            i = texto.indexOf(encontrar, i)
+            if(i !== -1)
+            i++;
+            cont++;
+         }
+         return document.write(`la palabra ${encontrar} aparece ${cont} veces`);
+        }    
+        textoEnCadena(texto, encontrar);
+    </script>
+</body>
+</html>
