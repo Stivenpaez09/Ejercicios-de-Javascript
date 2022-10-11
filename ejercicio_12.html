@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 12</title>
+    <h1 align = "center" style = "color: red;">EJERCICIO #12 <br></h1>
+    <h3 align = "left" style="color: #000;">Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no.</h3>
+</head>
+<body>
+    <script>
+        /*//Como yo lo hago
+        let numero = Number(prompt("ingrese un numero para calcular si es primo"));
+        const primo = (numero)=>{
+            if (!numero) return document.write("Debe ingresar un numero");
+            if (isNaN(numero === true)) return document.write("Debe ingresar un numero, no un caracter");
+            if (Math.sign(numero) === -1) return document.write("ingrese un numero positivo");
+            if (numero === 0) return document.write(`El numero no puede ser cero`);
+            if (numero === 2) return document.write(`El numero ${numero} SI es un numero primo`);
+            let conversion = Number.isInteger(numero / 2);
+            if (conversion === true) return document.write(`El numero ${numero} NO es un numero primo`);
+            if (conversion === false) return document.write(`El numero ${numero} SI es un numero primo`);
+            console.log(numero);
+        }
+        primo(numero);*/
+
+        //como en el curso lo hacen
+        let numero = Number(prompt("ingrese un numero para calcular si es primo"));
+        const primo = (numero)=>{
+            if (!numero) return document.write("Debe ingresar un numero");
+            if (isNaN(numero === true)) return document.write("Debe ingresar un numero, no un caracter");
+            if (Math.sign(numero) === -1) return document.write("ingrese un numero positivo");
+            if (numero === 0) return document.write(`El numero no puede ser cero`);
+            if (numero === 1) return document.write(`El numero ${numero} SI es un numero primo`);
+            let divisible = false;
+            for (let i = 2; i < numero; i++) {
+                if ((numero % i) === 0 ){
+                    divisible = true;
+                    break
+                };
+            }
+            return (divisible === true)
+             ? document.write(`El numero ${numero} NO es un numero primo`)
+             : document.write(`El numero ${numero} SI es un numero primo`);
+        }
+        primo(numero);
+    </script>
+</body>
+</html>
