@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 15</title>
+    <h1 align = "center" style = "color: red;">EJERCICIO #15 <br></h1>
+    <h3 align = "left" style="color: #000;">Programa una función para convertir números de base binaria a decimal y viceversa.</h3>
+</head>
+<body>
+    <script>
+        /*//Como yo lo hago
+       let numero = Number(prompt("Ingrese el numero que desea convertir"));
+        let tipo = prompt("Especifique que tipo de dato esta ingresando (decimal o binario).");
+        let conversion = (numero, tipo) => {
+            tipo = tipo.toLowerCase();
+            if (numero === undefined) return document.write("Debe ingresar el numero desea convertir");
+            if (isNaN(numero) === true) return document.write("Debe ingresar el numero que desea convertir, no se aceptan cadenas u otro tipo de dato.");
+            if (!tipo) return document.write("Debe ingresar el tipo de grado de la temperatura que esta ingresando ");
+            if (tipo === "decimal" || "binario"){
+                if (tipo === "decimal") return document.write(`El numero ${numero} decimal en binario es: ${numero.toString(2)}`);
+                if (tipo === "binario") return document.write(`El numero ${numero} binario en decimal es: ${parseInt(numero,2)}`);
+            }
+            return document.write("Tipo de dato no valido."); 
+        }
+        conversion(numero, tipo);*/
+        
+        //Como en el curso lo hacen
+        let numero = Number(prompt("Ingrese el numero que desea convertir"));
+        let tipo = Number(prompt("Especifique que tipo de dato esta ingresando (10 o 2)."));
+        let conversion = (numero, tipo) => {
+            if (numero === undefined) return document.write("Debe ingresar el numero desea convertir");
+            if (isNaN(numero) === true) return document.write("Debe ingresar el numero que desea convertir, no se aceptan cadenas u otro tipo de dato.");
+            if (tipo === undefined) return document.write("Debe ingresar el tipo de grado de la temperatura que esta ingresando ");
+            if (isNaN(tipo) === true) return document.write("El tipo base debe ser numerica, no se aceptan cadenas u otro tipo de dato.");
+            if (tipo === 2){
+                return document.write(`El numero ${numero} binario en decimal es: ${parseInt(numero,2)}`)
+            } else if (tipo === 10){
+                return document.write(`El numero ${numero} decimal en binario es: ${numero.toString(2)}`);
+            }
+        }
+        conversion(numero, tipo);
+    </script>
+</body>
+</html>
