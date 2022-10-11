@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 16</title>
+    <h1 align = "center" style = "color: red;">EJERCICIO #16 <br></h1>
+    <h3 align = "left" style="color: #000;">Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada.</h3>
+</head>
+<body>
+    <script>
+        /*//Como yo lo hago
+        let cantidad = Number(prompt("Ingrese la cantidad a la que se le aplicara el descuento"));
+        let descuento = Number(prompt("Ingrese el descuento que se aplicara"));
+        const descuentoCompra = (cantidad, descuento) => {
+            if (cantidad === undefined) return document.write("Debe ingresar el numero desea convertir");
+            if (isNaN(cantidad) === true) return document.write("Debe ingresar la cantidad en numero, no se aceptan cadenas u otro tipo de dato.");
+            if (!descuento) return document.write("Debe ingresar el descuento, solo debe ingresar el numero, no debe ir el espacion vacio.");
+            if (isNaN(descuento) === true) return document.write("Debe ingresar el descuento que se va a realizar, no se aceptan cadenas u otro tipo de dato.");
+            let porcentaje = descuento / 100;
+            let operacion = cantidad * porcentaje;
+            operacion = cantidad - operacion;
+            document.write(`El monto final de $${cantidad} menos el ${descuento}% es: $${operacion}`);
+        }
+        descuentoCompra(cantidad, descuento);*/
+
+        //Como en elocurso lo hacen
+        let cantidad = Number(prompt("Ingrese la cantidad a la que se le aplicara el descuento"));
+        let descuento = Number(prompt("Ingrese el descuento que se aplicara"));
+        const descuentoCompra = (cantidad, descuento) => {
+            if (cantidad === undefined) return document.write("Debe ingresar el numero desea convertir");
+            if (isNaN(cantidad) === true) return document.write("Debe ingresar la cantidad en numero, no se aceptan cadenas u otro tipo de dato.");
+            if (!descuento) return document.write("Debe ingresar el descuento, solo debe ingresar el numero, no debe ir el espacion vacio.");
+            if (isNaN(descuento) === true) return document.write("Debe ingresar el descuento que se va a realizar, no se aceptan cadenas u otro tipo de dato.");
+            return document.write(`${cantidad} - ${descuento} : ${cantidad - ((cantidad * descuento)/100)}`);
+            
+        }
+        descuentoCompra(cantidad, descuento);
+    </script>
+</body>
+</html>
