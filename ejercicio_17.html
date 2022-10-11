@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 17</title>
+    <h1 align = "center" style = "color: red;">EJERCICIO #17 <br></h1>
+    <h3 align = "left" style="color: #000;">Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy.</h3>
+</head>
+<body>
+    <script>
+        /*//Como yo lo hago
+        let año = Number(prompt("Ingresa tu año de nacimiento"));
+        let mes = Number(prompt("Ingresa tu mes de nacimiento"));
+        let dia = Number(prompt("Ingresa tu dia de nacimiento"));
+        const fechaDeNacimiento = (ano, mes, dia) => {
+            if (año === 0 || mes === 0 || dia === 0) return document.write("No puede existir un año, mes o dia de nacimiento igual a 0");
+            if (año === undefined) return document.write("Debe ingresar su año de nacimiento");
+            if (isNaN(año) === true) return document.write("El año ingresado debe ser un numero");
+            if (mes === undefined) return document.write("Debe ingresar su mes de nacimiento");
+            if (isNaN(mes) === true) return document.write("El mes ingresado debe ser un numero");
+            if (dia === undefined) return document.write("Debe ingresar su dia de nacimiento");
+            if (isNaN(dia) === true) return document.write("El dia ingresado debe ser un numero");
+            let minacimiento = new Date(año, mes, dia);
+            document.write(`Usted nacio el ${minacimiento}`);
+        }
+        fechaDeNacimiento(año, mes, dia);*/
+
+        //como lo hacen en el curso 
+        let fecha = new Date(prompt("ingrese su fecha"));
+        const fechaDeNacimiento = (fecha) => {
+            document.write(fecha.getMonth());
+            if (fecha === undefined) return document.write("Debe ingresar su fecha de nacimiento");
+            if (!(fecha instanceof Date)) return document.write("El año ingresado debe ser un una fecha con su respectivo año, mes y dia.");
+            let minacimiento = new Date().getTime() - fecha.getTime();
+            let conversion = 1000 * 60 * 60 * 24 * 365;
+            let total = Math.floor(minacimiento / conversion);
+            return (Math.sign(total) === 1)
+             ? document.write(`Tu tienes ${total} años.`)
+             : (Math.sign(total) === -1)
+              ? document.write(`Hace falta ${Math.abs(total)} años para el ${fecha.getFullYear()}`)
+              : document.write(`Estamos en el año ${fecha.getFullYear}`);
+        }
+        fechaDeNacimiento(fecha);
+    </script>
+</body>
+</html>
