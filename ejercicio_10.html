@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10</title>
+    <h1 align = "center" style = "color: red;">EJERCICIO #10 <br></h1>
+    <h3 align = "left" style="color: #000;">Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro).</h3>
+</head>
+<body>
+    <script>
+        //Como yo lo hago
+        let numero = Number(prompt(`Ingresa un numero para verificar si es copicuo`));
+        const palindromo = (numero = "")=>{
+            if (!numero) return document.write("Debe ingresar un numero");
+            if (isNaN(numero === true)) return document.write("Debe ingresar un numero, no un caracter");
+            numero = numero.toString();
+            let convertir = numero.split("").reverse().join("");
+            return (numero === convertir)
+            ?document.write(`El numero "${numero}" SI es copicuo, al reves es "${convertir}"`)
+            :document.write(`El numero "${numero}" NO es copicuo, al reves es "${convertir}"`) 
+        }
+        palindromo(numero);
+    </script>
+</body>
+</html> 
