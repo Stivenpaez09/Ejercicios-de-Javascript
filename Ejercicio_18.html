@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 18</title>
+    <h1 align = "center" style = "color: red;">EJERCICIO #18 <br></h1>
+    <h3 align = "left" style="color: #000;"> Programa una función que dada una cadena de texto cuente el número de vocales y consonantes.</h3>
+</head>
+<body>
+    <script>
+        /*//Como yo lo hago
+        let frase = prompt("Ingrese la frase a la que desea ver cuantas palabras y consonantes tiene");
+        const contarVocales = (frase) => {
+            frase = frase.toLowerCase();
+            const vocales = ["a","e","i","o","u"];
+            const consonantes = ["b","c","d","f","g","h","j","k","l","m","n","ñ","p","q","r","s","t","v","w","x","y","z"];
+            if (!frase) return document.write("Debes ingresar una frase");
+            if (Number(frase) == frase) return document.write("Debes ingresar un texto, no otro tipo de dato");
+            let conversion = frase.split("");
+            let contvocales = 0, contconsonantes = 0;
+            conversion.forEach((item) => {
+                if (vocales.includes(item) === true) contvocales++;
+                if (consonantes.includes(item) === true) contconsonantes++;
+            });
+            document.write(`La frase "${frase}" tiene ${contvocales} vocales y tiene ${contconsonantes} consonantes.`);
+        }
+        contarVocales(frase);*/
+
+        //Como en el curso lo hacen
+        let frase = prompt("Ingrese la frase a la que desea ver cuantas palabras y consonantes tiene");
+        const contarVocales = (frase) => {
+            frase = frase.toLowerCase();
+            if (!frase) return document.write("Debes ingresar una frase");
+            if (Number(frase) == frase) return document.write("Debes ingresar un texto, no otro tipo de dato");
+            let contvocales = 0, contconsonantes = 0;
+            for (const letra of frase) {
+                if(/[aeiouáéíóúü]/.test(letra)) contvocales++;
+                if (/[bcdfghjklmnñpqrstvwxyz]/.test(letra)) contconsonantes++;
+            }
+            document.write(`La frase "${frase}" tiene ${contvocales} vocales y tiene ${contconsonantes} consonantes.`);
+        }
+        contarVocales(frase);
+    </script>
+</body>
+</html>
